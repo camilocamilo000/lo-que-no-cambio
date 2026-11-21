@@ -3,18 +3,31 @@
 Experiencia de realidad aumentada creada con Zence Inverse Reality.
 
 **Modo:** World Effects (anclaje al suelo con SLAM)
-**Hosting:** GitHub Pages
-**En vivo:** https://camilocamilo000.github.io/lo-que-no-cambio/
+**Hosting:** Cloudflare Pages
+**En vivo:** la asigna Cloudflare Pages al conectar el repositorio
 
 ---
 
 ## Cómo se publica
 
-Cada `push` a `main` dispara `.github/workflows/deploy.yml`, que compila el
-proyecto y lo publica en GitHub Pages. No hay que hacer nada más: **editar y guardar
-desde Zence Inverse Reality crea un commit, y el commit actualiza la experiencia.**
+En Cloudflare: **Workers & Pages → Create → Pages → Connect to Git**, elige este
+repositorio y despliega. `wrangler.toml` declara el directorio de salida, pero el
+comando de compilación no cabe en ese archivo, así que ese sí hay que escribirlo:
 
-Si es la primera vez, activa Pages en *Settings → Pages → Source: GitHub Actions*.
+| Ajuste | Valor | De dónde sale |
+| --- | --- | --- |
+| Framework preset | None | — |
+| Build command | `npm run build` | **hay que escribirlo** |
+| Build output directory | `dist` | `wrangler.toml` |
+| Project name | `lo-que-no-cambio` | `wrangler.toml` |
+| Node | 22 | `.node-version` |
+
+El nombre del proyecto **tiene que ser exactamente** `lo-que-no-cambio`: con otro,
+el build falla. Se puede cambiar, pero entonces hay que cambiarlo también en
+`wrangler.toml`.
+
+Hecho eso, **cada `push` a `main` vuelve a desplegar**: editar y guardar desde Zence Inverse Reality
+crea un commit, y el commit actualiza la experiencia.
 
 ## Cómo editarlo
 
