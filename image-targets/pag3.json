@@ -1,0 +1,27 @@
+{
+  "imagePath": "image-targets/pag3_luminance.png",
+  "resources": {
+    "originalImage": "pag3_original.png",
+    "croppedImage": "pag3_cropped.png",
+    "thumbnailImage": "pag3_thumbnail.png",
+    "luminanceImage": "pag3_luminance.png"
+  },
+  "name": "pag3",
+  "type": "PLANAR",
+  "metadata": null,
+  "moveable": false,
+  "physicalWidthInMeters": null,
+  "properties": {
+    "top": 0,
+    "left": 222,
+    "width": 1329,
+    "height": 1772,
+    "isRotated": false,
+    "originalWidth": 1772,
+    "originalHeight": 1772
+  },
+  "userMetadataIsJson": true,
+  "loadAutomatically": true,
+  "created": 1795232524278,
+  "updated": 1795232524278
+}

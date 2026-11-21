@@ -1,0 +1,27 @@
+{
+  "imagePath": "image-targets/pag2_2_luminance.png",
+  "resources": {
+    "originalImage": "pag2_2_original.png",
+    "croppedImage": "pag2_2_cropped.png",
+    "thumbnailImage": "pag2_2_thumbnail.png",
+    "luminanceImage": "pag2_2_luminance.png"
+  },
+  "name": "pag2_2",
+  "type": "PLANAR",
+  "metadata": null,
+  "moveable": false,
+  "physicalWidthInMeters": null,
+  "properties": {
+    "top": 0,
+    "left": 222,
+    "width": 1329,
+    "height": 1772,
+    "isRotated": false,
+    "originalWidth": 1772,
+    "originalHeight": 1772
+  },
+  "userMetadataIsJson": true,
+  "loadAutomatically": true,
+  "created": 1795232299371,
+  "updated": 1795232299371
+}
